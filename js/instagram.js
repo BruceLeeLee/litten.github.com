@@ -10,7 +10,7 @@ define([], function (){
 			var data = res.list[j].arr;
 			var liTmpl = "";
 			for(var i=0,len=data.link.length;i<len;i++){
-				var src = '/assets/ins/' + data.link[i];
+				var src = 'http://littendomo.sinaapp.com/ins/' + data.link[i];
 				var type = data.type[i];
 				var target = (src + (type == 'video' ? '.mp4' : '.jpg'));
 				src += '.jpg';
@@ -62,7 +62,7 @@ define([], function (){
 	}
 
 	var getList = function(url){
-		$(".open-ins").html("图片来自instagram，正在加载中…");
+		$(".open-ins").html("图片同步自instagram");
 		$.ajax({
 			url: url,
 			type:"GET",
